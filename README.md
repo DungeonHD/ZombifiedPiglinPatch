@@ -39,6 +39,8 @@ The jar ends up in `build/libs/`. Needs JDK 25.
 
 There are no tick handlers, event listeners or entity scans.
 
-## License
+## Credits & Licence
 
-CC-BY-NC-SA
+Copyright (c) 2026 [DungeonHD](https://github.com/DungeonHD)
+
+This work is licensed under the GPL-3.0 Licence.

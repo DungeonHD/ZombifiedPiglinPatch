@@ -3,12 +3,12 @@
   "id": "zombifiedpiglinpatch",
   "version": "${version}",
   "name": "ZombifiedPiglinPatch",
-  "description": "Patches zombified piglins, so that they drop xp at any time when killed and don't spawn with spears",
+  "description": "Brings back the old zombified piglin behavior: they drop XP no matter how they die, and they no longer spawn with spears.",
   "authors": [
-    "DungeonHD"
+    "DungeonHD a.k.a DungeonFinder"
   ],
   "contact": {},
-  "license": "CC-BY-NC-SA",
+  "license": "GPL-3.0",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [

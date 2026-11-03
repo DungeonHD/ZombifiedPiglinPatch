@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
 
-    // dropExperience() only pays out without a recent player hit if this returns true.
-    // XP amount stays vanilla, the mob_drops gamerule still applies.
+    /* dropExperience() only pays out without a recent player hit if this returns true.
+       XP amount stays vanilla, the mob_drops gamerule still applies. */
     @Inject(method = "isAlwaysExperienceDropper", at = @At("HEAD"), cancellable = true)
     private void zpp$alwaysDropExperience(CallbackInfoReturnable<Boolean> cir) {
         LivingEntity self = (LivingEntity) (Object) this;
