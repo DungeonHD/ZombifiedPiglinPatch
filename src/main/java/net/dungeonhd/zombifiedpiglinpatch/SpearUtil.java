@@ -8,8 +8,6 @@ import net.minecraft.world.item.Items;
 
 public final class SpearUtil {
 
-    private static final EquipmentSlot[] HANDS = {EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND};
-
     private SpearUtil() {
     }
 
@@ -21,16 +19,10 @@ public final class SpearUtil {
         return BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath().endsWith("_spear");
     }
 
-    // swapForSword: main hand spear becomes a golden sword, otherwise the slot is just cleared.
-    public static void stripSpears(Mob mob, boolean swapForSword) {
-        for (EquipmentSlot slot : HANDS) {
-            if (isSpear(mob.getItemBySlot(slot))) {
-                if (swapForSword && slot == EquipmentSlot.MAINHAND) {
-                    mob.setItemSlot(slot, new ItemStack(Items.GOLDEN_SWORD));
-                } else {
-                    mob.setItemSlot(slot, ItemStack.EMPTY);
-                }
-            }
+    // Replaces a spear in the main hand with a golden sword.
+    public static void swapSpearForSword(Mob mob) {
+        if (isSpear(mob.getItemBySlot(EquipmentSlot.MAINHAND))) {
+            mob.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.GOLDEN_SWORD));
         }
     }
 }

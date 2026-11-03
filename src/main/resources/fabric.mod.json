@@ -4,9 +4,11 @@
   "version": "${version}",
   "name": "ZombifiedPiglinPatch",
   "description": "Patches zombified piglins, so that they drop xp at any time when killed and don't spawn with spears",
-  "authors": [],
+  "authors": [
+    "DungeonHD"
+  ],
   "contact": {},
-  "license": "All-Rights-Reserved",
+  "license": "CC-BY-NC-SA",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
