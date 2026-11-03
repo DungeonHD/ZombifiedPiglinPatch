@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "zombifiedpiglinpatch",
+  "version": "${version}",
+  "name": "ZombifiedPiglinPatch",
+  "description": "Patches zombified piglins, so that they drop xp at any time when killed and don't spawn with spears",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "net.dungeonhd.zombifiedpiglinpatch.client.ZombifiedpiglinpatchDataGenerator"
+    ],
+    "main": [
+      "net.dungeonhd.zombifiedpiglinpatch.Zombifiedpiglinpatch"
+    ]
+  },
+  "mixins": [
+    "zombifiedpiglinpatch.mixins.json",
+    {
+      "config": "zombifiedpiglinpatch.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

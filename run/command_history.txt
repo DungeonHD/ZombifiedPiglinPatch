@@ -1,0 +1,9 @@
+/locate biome minecraft:plains
+/tp @s -6 98 -621
+/gamerule command_block_output false
+/kill @e[type=minecraft:zombified_piglin]
+/setblock 16 86 -685 minecraft:hopper replace
+/summon minecraft:zombified_piglin 17.64 88.00 -679.66
+/kill @e[type=minecraft:zombified_piglin]
+/kill @e[type=item]
+/difficulty hard
